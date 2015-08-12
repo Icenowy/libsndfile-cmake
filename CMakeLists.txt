@@ -76,3 +76,5 @@ check_type_size(wchar_t SIZEOF_WCHAR_T)
 check_type_size("long long" SIZEOF_LONG_LONG)
 check_c_source_runs(cmake/clip_mode_positive.c CPU_CLIPS_POSITIVE)
 check_c_source_runs(cmake/clip_mode_negative.c CPU_CLIPS_NEGATIVE)
+
+add_subdirectory(src)
