@@ -1,0 +1,275 @@
+#ifdef __GNUC__
+/* Set to 1 if the compile is GNU GCC. */
+#define COMPILER_IS_GCC 1
+#endif
+
+/* Target processor clips on negative float to int conversion. */
+#cmakedefine CPU_CLIPS_NEGATIVE 1
+
+/* Target processor clips on positive float to int conversion. */
+#cmakedefine CPU_CLIPS_POSITIVE 1
+
+#if @CPU_BIG_ENDIAN@
+/* Target processor is big endian. */
+#define CPU_IS_BIG_ENDIAN 1
+#else
+/* Target processor is little endian. */
+#define CPU_IS_LITTLE_ENDIAN 1
+#endif
+
+/* Set to 1 to enable experimental code. */
+#cmakedefine ENABLE_EXPERIMENTAL_CODE 1
+
+/* Define to 1 if you have the <alsa/asoundlib.h> header file. */
+#cmakedefine HAVE_ALSA_ASOUNDLIB_H 1
+
+/* Define to 1 if you have the <byteswap.h> header file. */
+#cmakedefine HAVE_BYTESWAP_H 1
+
+/* Define to 1 if you have the `calloc' function. */
+#cmakedefine HAVE_CALLOC 1
+
+/* Define to 1 if you have the `ceil' function. */
+#define HAVE_CEIL 1
+
+/* Set to 1 if S_IRGRP is defined. */
+#cmakedefine HAVE_DECL_S_IRGRP 1
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#cmakedefine HAVE_DLFCN_H 1
+
+/* Define to 1 if you have the <endian.h> header file. */
+#cmakedefine HAVE_ENDIAN_H 1
+
+/* Will be set to 1 if flac, ogg and vorbis are available. */
+/* #undef HAVE_EXTERNAL_LIBS */
+/* STUB: Not used */
+
+/* Set to 1 if the compile supports the struct hack. */
+#define HAVE_FLEXIBLE_ARRAY 1
+/* STUB: May be 0 when using ancient compilers */
+
+/* Define to 1 if you have the `floor' function. */
+#define HAVE_FLOOR 1
+
+/* Define to 1 if you have the `fmod' function. */
+#define HAVE_FMOD 1
+
+/* Define to 1 if you have the `free' function. */
+#cmakedefine HAVE_FREE 1
+
+/* Define to 1 if you have the `fstat' function. */
+#cmakedefine HAVE_FSTAT 1
+
+/* Define to 1 if you have the `fsync' function. */
+#cmakedefine HAVE_FSYNC 1
+
+/* Define to 1 if you have the `ftruncate' function. */
+#cmakedefine HAVE_FTRUNCATE 1
+
+/* Define to 1 if you have the `m' library (-lm). */
+/* #undef HAVE_LIBM */
+/* Unuseful under CMake */
+
+/* Set to 1 if you have libsqlite3. */
+/* #undef HAVE_SQLITE3 */
+/* STUB: Not used now. */
+
+/* Define to 1 if the system has the type `ssize_t'. */
+#define HAVE_SSIZE_T @HAVE_SIZEOF_SSIZE_T@
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+/* #undef LT_OBJDIR */
+/* Unuseful under CMake */
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+/* #undef NO_MINUS_C_MINUS_O */
+/* Unuseful under CMake */
+
+/* Set to 1 if compiling for MacOSX */
+#cmakedefine OS_IS_MACOSX 1
+
+/* Set to 1 if compiling for Win32 */
+#cmakedefine OS_IS_WIN32 1
+
+/* Name of package */
+#define PACKAGE "libsndfile"
+
+/* Define to the address where bug reports for this package should be sent. */
+#define PACKAGE_BUGREPORT ""
+
+/* Define to the full name of this package. */
+#define PACKAGE_NAME "libsndfile"
+
+/* Define to the full name and version of this package. */
+#define PACKAGE_STRING "libsndfile-1.0.25"
+
+/* Define to the one symbol short name of this package. */
+#define PACKAGE_TARNAME "libsndfile"
+
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
+
+/* Define to the version of this package. */
+#define PACKAGE_VERSION "1.0.25"
+
+/* Set to maximum allowed value of sf_count_t type. */
+/* #undef SF_COUNT_MAX */
+/* unused */
+
+/* Set to sf_count_t if unknown. */
+#define SIZEOF_SF_COUNT_T 8
+
+/* The size of `long long', as computed by sizeof. */
+#define SIZEOF_LONG_LONG @SIZEOF_LONG_LONG@
+
+/* Define to 1 if you have the ANSI C header files. */
+#define STDC_HEADERS 1
+
+/* Set to long if unknown. */
+#define TYPEOF_SF_COUNT_T int64_t
+
+/* Set to 1 to use the native windows API */
+#cmakedefine USE_WINDOWS_API 1
+
+/* Version number of package */
+#define VERSION "1.0.25"
+
+/* Set to 1 if windows DLL is being built. */
+/* #undef WIN32_TARGET_DLL */
+/* STUB: Only static version is used in our project, contribution welcomed. */
+
+#if @CPU_BIG_ENDIAN@
+/* Target processor is big endian. */
+#define WORDS_BIGENDIAN 1
+#fi
+
+/* Number of bits in a file offset, on hosts where this is settable. */
+#define _FILE_OFFSET_BITS 64
+
+/* Define to make fseeko etc. visible, on some hosts. */
+#define _LARGEFILE_SOURCE
+
+/* Define for large files, on AIX-style hosts. */
+#define _LARGE_FILES
+
+/* Set to 1 to use C99 printf/snprintf in MinGW. */
+/* #undef __USE_MINGW_ANSI_STDIO */
+/* unused */
+
+/* Define to 1 if you have the `getpagesize' function. */
+#cmakedefine HAVE_GETPAGESIZE 1
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#cmakedefine HAVE_GETTIMEOFDAY 1
+
+/* Define to 1 if you have the `gmtime' function. */
+#cmakedefine HAVE_GMTIME 1
+
+/* Define to 1 if you have the `gmtime_r' function. */
+#cmakedefine HAVE_GMTIME_R 1
+
+/* Define to 1 if you have the `localtime' function. */
+#cmakedefine HAVE_LOCALTIME 1
+
+/* Define to 1 if you have the `localtime_r' function. */
+#cmakedefine HAVE_LOCALTIME_R 1
+
+/* Define to 1 if you have the `lrint' function. */
+#cmakedefine HAVE_LRINT 1
+
+/* Define to 1 if you have the `lrintf' function. */
+#cmakedefine HAVE_LRINTF 1
+
+/* Define to 1 if you have the `lseek' function. */
+#cmakedefine HAVE_LSEEK 1
+
+/* Define to 1 if you have the `malloc' function. */
+#cmakedefine HAVE_MALLOC 1
+
+/* Define to 1 if you have the `mmap' function. */
+#cmakedefine HAVE_MMAP 1
+
+/* Define to 1 if you have the `open' function. */
+#cmakedefine HAVE_OPEN 1
+
+/* Define to 1 if you have the `pipe' function. */
+#cmakedefine HAVE_PIPE 1
+
+/* Define to 1 if you have the `pread' function. */
+#cmakedefine HAVE_PREAD 1
+
+/* Define to 1 if you have the `pwrite' function. */
+#cmakedefine HAVE_PWRITE 1
+
+/* Define to 1 if you have the `read' function. */
+#cmakedefine HAVE_READ 1
+
+/* Define to 1 if you have the `realloc' function. */
+#cmakedefine HAVE_REALLOC 1
+
+/* Define to 1 if you have the `setlocale' function. */
+#cmakedefine HAVE_SETLOCALE 1
+
+/* Define to 1 if you have the `snprintf' function. */
+#cmakedefine HAVE_SNPRINTF 1
+
+/* Define to 1 if you have the <locale.h> header file. */
+#cmakedefine HAVE_LOCALE_H 1
+
+/* Define to 1 if you have the <memory.h> header file. */
+#cmakedefine HAVE_MEMORY_H 1
+
+/* Define to 1 if you have the <sndio.h> header file. */
+#cmakedefine HAVE_SNDIO_H 1
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#cmakedefine HAVE_STDINT_H 1
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine HAVE_STDLIB_H 1
+
+/* Define to 1 if you have the <strings.h> header file. */
+#cmakedefine HAVE_STRINGS_H 1
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine HAVE_STRING_H 1
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#cmakedefine HAVE_SYS_STAT_H 1
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#cmakedefine HAVE_SYS_TIME_H 1
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine HAVE_SYS_TYPES_H 1
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H 1
+
+/* Define to 1 if you have the `vsnprintf' function. */
+#cmakedefine HAVE_VSNPRINTF 1
+
+/* Define to 1 if you have the `waitpid' function. */
+#cmakedefine HAVE_WAITPID 1
+
+/* Define to 1 if you have the `write' function. */
+#cmakedefine HAVE_WRITE 1
+
+/* Define to 1 if you have the <sys/wait.h> header file. */
+#cmakedefine HAVE_SYS_WAIT_H 1
+
+#define SIZEOF_DOUBLE @SIZEOF_DOUBLE@
+#define SIZEOF_FLOAT @SIZEOF_FLOAT@
+#define SIZEOF_INT @SIZEOF_INT@
+#define SIZEOF_INT64_T @SIZEOF_INT64_T@
+#define SIZEOF_LOFF_T @SIZEOF_LOFF_T@
+#define SIZEOF_LONG @SIZEOF_LONG@
+#define SIZEOF_OFF64_T @SIZEOF_OFF64_T@
+#define SIZEOF_OFF_T @SIZEOF_OFF_T@
+#define SIZEOF_SHORT @SIZEOF_SHORT@
+#define SIZEOF_SIZE_T @SIZEOF_SIZE_T@
+#define SIZEOF_SSIZE_T @SIZEOF_SSIZE_T@
+#define SIZEOF_VOIDP @SIZEOF_VOIDP@
+#define SIZEOF_WCHAR_T @SIZEOF_WCHAR_T@
