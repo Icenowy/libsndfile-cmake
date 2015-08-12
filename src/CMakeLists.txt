@@ -1,4 +1,5 @@
 file(GLOB_RECURSE LIBSNDFILE_SRC_SOURCES RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "*.c")
 add_library(sndfile STATIC ${LIBSNDFILE_SRC_SOURCES})
-target_include_directories(sndfile INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_include_directories(sndfile PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}"
+    "${CMAKE_CURRENT_BINARY_DIR}")
 

@@ -4,17 +4,31 @@
 #endif
 
 /* Target processor clips on negative float to int conversion. */
-#cmakedefine CPU_CLIPS_NEGATIVE 1
+#cmakedefine CMAKE_CPU_CLIPS_NEGATIVE 1
+#ifdef CMAKE_CPU_CLIPS_NEGATIVE
+#define CPU_CLIPS_NEGATIVE 1
+#else
+#define CPU_CLIPS_NEGATIVE 0
+#endif
 
 /* Target processor clips on positive float to int conversion. */
-#cmakedefine CPU_CLIPS_POSITIVE 1
+#cmakedefine CMAKE_CPU_CLIPS_POSITIVE 1
+#ifdef CMAKE_CPU_CLIPS_POSITIVE
+#define CPU_CLIPS_POSITIVE 1
+#else
+#define CPU_CLIPS_POSITIVE 0
+#endif
 
-#if @CPU_BIG_ENDIAN@
+
+#define CMAKE_CPU_BIG_ENDIAN 1@CPU_BIG_ENDIAN@
+
+#if (CMAKE_CPU_BIG_ENDIAN == 11)
 /* Target processor is big endian. */
 #define CPU_IS_BIG_ENDIAN 1
 #else
 /* Target processor is little endian. */
 #define CPU_IS_LITTLE_ENDIAN 1
+#define CPU_IS_BIG_ENDIAN 0
 #endif
 
 /* Set to 1 to enable experimental code. */
@@ -140,10 +154,10 @@
 /* #undef WIN32_TARGET_DLL */
 /* STUB: Only static version is used in our project, contribution welcomed. */
 
-#if @CPU_BIG_ENDIAN@
+#if (CMAKE_CPU_BIG_ENDIAN == 11)
 /* Target processor is big endian. */
 #define WORDS_BIGENDIAN 1
-#fi
+#endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 #define _FILE_OFFSET_BITS 64

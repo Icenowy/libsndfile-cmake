@@ -9,7 +9,11 @@ INCLUDE(CheckCSourceRuns)
 INCLUDE(CheckTypeSize)
 
 test_big_endian(CMAKE_BIG_ENDIAN)
-
+if(CMAKE_BIG_ENDIAN)
+set(CMAKE_BIG_ENDIAN 1)
+else()
+set(CMAKE_BIG_ENDIAN 0)
+endif()
 check_include_files(alsa/asoundlib.h HAVE_ALSA_ASOUNDLIB_H)
 check_include_files(byteswap.h HAVE_BYTESWAP_H)
 check_function_exists(calloc HAVE_CALLOC)
