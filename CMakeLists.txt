@@ -5,7 +5,8 @@ INCLUDE(CheckIncludeFiles)
 INCLUDE(TestBigEndian)
 INCLUDE(CheckFunctionExists)
 INCLUDE(CheckSymbolExists)
-
+INCLUDE(CheckCSourceRuns)
+INCLUDE(CheckTypeSize)
 
 test_big_endian(CMAKE_BIG_ENDIAN)
 
@@ -76,5 +77,7 @@ check_type_size(wchar_t SIZEOF_WCHAR_T)
 check_type_size("long long" SIZEOF_LONG_LONG)
 check_c_source_runs(cmake/clip_mode_positive.c CPU_CLIPS_POSITIVE)
 check_c_source_runs(cmake/clip_mode_negative.c CPU_CLIPS_NEGATIVE)
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/config.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config.h)
 
 add_subdirectory(src)
